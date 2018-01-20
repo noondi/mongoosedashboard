@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jedi Factory</title>
+  </head>
+  <body>
+  <h1>Build New Jedi</h1>
+  <div class="newjedis">
+    <form action='/jedis' method='post'>
+      <p>Name: <input type='text' name='name'></p>
+      <p>Age: <input type='number' name='age'></p>
+      <p>Citizenship: <input type='text' name='citizenship'></p>      
+      <p>Category: <br>
+        <label for="regularCitizen">Regular Citizen</label>
+        <input type="radio" id="" name="category" selected value="Regular Citizen"><br>      
+        <label for="chosenOne">Chosen One</label>
+        <input type="radio" id="" name="category" value="Chosen One"><br></p>
+      <!-- Educational Stage: <input type='text' name='educationalStage'><br> -->
+      <p><label for="aha">Educational Stage: </label>
+        <select name='educationalStage'>
+            <option selected value="Master">Master</option>
+            <option value="Knight">Knight</option>
+            <option value="Padawan">Padawan</option>
+            <option value="Initiate">Initiate</option>             
+        </select>
+      </p>
+      <p>
+        <label for="aha">Council: </label><br>
+        <label for="Jedi High Council">Jedi High Council</label>
+        <input type="checkbox" id="Jedi High Council" name="council" value="Jedi High Council"><br>          
+        <label for="Council of First Knowledge">Council of First Knowledge</label>
+        <input type="checkbox" id="Council of First Knowledge" name="council" value="Council of First Knowledge"><br>         
+        <label for="Council of Reconciliation">Council of Reconciliation</label>
+        <input type="checkbox" id="Council of Reconciliation" name="council" value="Council of Reconciliation"><br>          
+        <label for="Council of Reassignment">Council of Reassignment</label>
+        <input type="checkbox" id="Council of Reassignment" name="council" value="Council of Reassignment"><br>
+      </p>
+      <!-- Council: <input type='text' name='council'><br> -->
+      <p>Number of Weapons: <input type="number" name ="weapon"></p>
+      <p>Not every "Dark Side"-user is a Sith; nor is every "Light Side"-user a Jedi. <br> 
+      Within the Star Wars Expanded Universe, people of all species have demonstrated <br>
+      varying "force-sensitive" powers and abilities.</p>
+      <p>Criminal Record: <br> <textarea class='form-control' type='text' name='criminalRecord'></textarea></p><br><br>
+      <input type='submit' value='Build Jedi'><br><br>
+    </form>
+    <a href="/">Current Jedi Population</a>
+  </div>
+  </body>
+</html>
+
+
+

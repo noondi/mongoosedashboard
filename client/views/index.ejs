@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jedis</title>
+  </head>
+  <body>
+  <h1>All of the Jedis!</h1>
+  <p><a href="jedis/new">Build A Jedi</a></p>
+  <% for(var i = 0; i < tous.length; i++) { %>
+  <h4>Name: <%= tous[i].name%></h4>
+  <a href="/jedis/<%=tous[i]._id%>">More info</a>
+  <h4>Age: <%= tous[i].age%></h4>
+  <h4>Citizenship: <%= tous[i].citizenship%></h4>
+  <h4>Category: <%= tous[i].category%></h4>
+  <h4>Educational Stage: <%= tous[i].educationalStage%></h4>
+  <h4>Council: <%= tous[i].council%></h4>
+  <h4>Weapon(s): <%= tous[i].weapon%></h4>
+  <h4>Criminal Record: <%= tous[i].criminalRecord%></h4><br><br>
+  <a href="/jedis/edit/<%= tous[i]._id%>">Edit Jedi</a><br><br>
+  <p>
+  <form action="/jedis/destroy/<%= tous[i]._id%>" method="post">
+  <input type="submit" value="Destroy This Jedi">
+  </form>
+  </p>
+  <% } %>
+  </body>
+</html>
+
+
+
+

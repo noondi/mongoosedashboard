@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jedis</title>
+  </head>
+  <body>
+    <h2>Jedi Identity</h2>
+    <% for(var i = 0; i < citizen.length; i++) { %>
+    <h4>Name: <%= citizen[i].name%></h4>
+    <h4>Age: <%= citizen[i].age%></h4>
+    <h4>Citizenship: <%= citizen[i].citizenship%></h4>
+    <h4>Category: <%= citizen[i].category%></h4>
+    <h4>Educational Stage: <%= citizen[i].educationalStage%></h4>
+    <h4>Council: <%= citizen[i].council%></h4>
+    <h4>Weapon(s): <%= citizen[i].weapon%></h4>
+    <h4>Criminal Record: <%= citizen[i].criminalRecord%></h4><br><br>
+    <a href="/">Current Jedi Population</a><br><br>
+    <a href="/jedis/edit/<%=citizen[i]._id%>">edit</a><br><br>
+    <p>
+      <form action="/jedis/destroy/<%= citizen[i]._id%>" method="post">
+      <input type="submit" value="Destroy this Jedi!">
+      </form>
+    </p>
+    <% } %>
+  </body>
+</html>
